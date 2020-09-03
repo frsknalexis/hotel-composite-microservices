@@ -1,0 +1,16 @@
+#SPRING CONFIGURATION
+spring:
+  application:
+    name: hotel-room-composite
+
+server:
+  port: 9003
+
+#EUREKA CLIENT CONFIGURATION
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true

@@ -1,0 +1,7 @@
+#APP CONFIGURATION
+spring:
+  profiles:
+    active: github
+
+server:
+  port: 8888

@@ -1,0 +1,12 @@
+#SPRING CONFIGURATION
+server:
+  port: 9002
+
+spring:
+  application:
+    name: microservices-hotel
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://localhost:8888

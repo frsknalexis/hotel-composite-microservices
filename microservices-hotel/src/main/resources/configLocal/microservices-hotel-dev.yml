@@ -1,0 +1,28 @@
+#SPRING CONFIGURATION
+spring:
+  application:
+    name: microservices-hotel
+
+#MONGODB CONFIGURATION
+  data:
+    mongodb:
+      uri: mongodb://192.168.99.100:37017/hotel_app
+
+server:
+  port: 9002
+
+#CONFIGURATION FOR ACTUATOR
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: *
+
+
+#EUREKA CLIENT CONFIGURATION
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
