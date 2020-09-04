@@ -1,0 +1,19 @@
+#APP CONFIGURATION
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/frsknalexis/config-server-hotel-composite-microservices.git
+          username: frsknalexis
+          password: a06_04_1997a
+
+#EUREKA CLIENT CONFIGURATION - RUNNING ON DOCKER CONTAINER
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka

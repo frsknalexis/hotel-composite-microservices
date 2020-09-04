@@ -1,7 +1,7 @@
 #APP CONFIGURATION
 spring:
   profiles:
-    active: github
+    active: docker
 
 server:
   port: 8888
