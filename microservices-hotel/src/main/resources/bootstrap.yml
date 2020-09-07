@@ -6,7 +6,7 @@ spring:
   application:
     name: microservices-hotel
   profiles:
-    active: dev
+    active: docker
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://config-server:8888
