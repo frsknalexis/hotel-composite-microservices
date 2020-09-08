@@ -1,0 +1,23 @@
+#SPRING CONFIGURATION RUNNING ON DOCKER CONTAINER
+spring:
+  application:
+    name: microservices-open-room
+
+  #MONGODB CONFIGURATION
+  data:
+    mongodb:
+      uri: mongodb://192.168.99.100:37017/hotel_app
+
+server:
+  port: 9001
+
+#CONFIGURATION FOR ACTUATOR
+
+
+#EUREKA CLIENT CONFIGURATION
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
