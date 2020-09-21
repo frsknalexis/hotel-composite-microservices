@@ -77,8 +77,8 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 	<build>
+		<finalName>hotel-room-composite</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -86,5 +86,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
